@@ -30,10 +30,8 @@ function closed_plugins_checker() {
             
             if ( false === get_transient( 'status_check_'.$slug ) ) {
                 $url = $base_url . $slug . '.json';
-                //$status_check = wp_remote_get( $url );
                 $requests[ $slug ] = array( 'url' => $url );
                 $i++;
-                //set_transient( 'status_check_'.$slug, $status_check, 24 * HOUR_IN_SECONDS );
             } else {
                 $cached[ $slug ] = get_transient( 'status_check_'.$slug );
             }
