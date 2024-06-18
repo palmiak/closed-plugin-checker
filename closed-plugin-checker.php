@@ -5,7 +5,7 @@
 
 function check_if_wp_repo( $update_url ) {
     $parsed_repo_url = wp_parse_url( $update_url );
-	$repo_host = isset( $parsed_repo_url['host'] ) ? $parsed_repo_url['host'] : $update_url;
+    $repo_host = isset( $parsed_repo_url['host'] ) ? $parsed_repo_url['host'] : $update_url;
     return ( $repo_host === 'w.org' || empty( $repo_host ) );
 }   
 
